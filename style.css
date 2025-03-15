@@ -1,0 +1,108 @@
+body {
+    font-family: 'Schoolbell', cursive;
+    color: #18ff18; /* Warna Neon Green */
+    background-color: black; /* Agar neon terlihat jelas */
+}
+
+/* NavBar */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8); /* Transparan sedikit */
+    border-bottom: 2px solid #39ff14;
+}
+.navbar-brand, .nav-link, .navbar-toggler-icon, .search-btn {
+    color: #39ff14 !important; /* Warna Neon Green */
+}
+.navbar-toggler {
+    color: #39ff14;
+    border-color: none;
+}
+.nav-link:hover {
+    text-shadow: 0 0 10px #39ff14;
+}
+.search-input {
+    background-color: black;
+    color: #39ff14;
+    border: 1px solid #39ff14;
+}
+
+/* Sosial Link CSS */
+.social-link {
+    color: #18ff18;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: white;
+}
+
+/* Text Neon */
+.neon-text {
+    font-family: 'Schoolbell', cursive;
+    color: #39ff14; /* Neon Green */
+    text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 15px #39ff14;
+}
+
+/* CSS Postingan */
+.post-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.post-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+}
+.post-title-link {
+    text-decoration: none;
+    color: #18ff18;
+    transition: color 0.3s ease;
+}
+.post-title-link:hover {
+    color: white;
+}
+
+/* CSS Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Responsif: 2 kolom untuk layar kecil */
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Responsif: 1 kolom untuk layar sangat kecil (HP kecil) */
+@media (max-width: 400px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.post-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.post-item img {
+    width: 100%; /* Membuat gambar memenuhi wadahnya */
+    max-width: 150px; /* Batasi ukuran maksimum gambar */
+    height: auto; /* Menjaga aspek rasio */
+    display: block;
+    margin: 0 auto; /* Pusatkan gambar jika perlu */
+    border-radius: 8px; /* Opsional: Membuat sudut gambar melengkung */
+}
+
+.post-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.post-item img {
+    flex-shrink: 0;
+}
